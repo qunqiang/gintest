@@ -11,7 +11,7 @@ import (
 
 const (
 	Threads = 10
-	Jobs    = 100
+	Jobs    = 1000
 )
 
 func main() {

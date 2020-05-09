@@ -5,9 +5,10 @@ import (
 	"io/ioutil"
 )
 
+var body []byte
+
 func Test(c *gin.Context) {
 	var err error
-	body := []byte{}
 	body, err = ioutil.ReadAll(c.Request.Body)
 	if err != nil {
 		panic(err)
