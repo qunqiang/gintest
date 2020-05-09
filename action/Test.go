@@ -7,8 +7,8 @@ import (
 
 func Test(c *gin.Context) {
 	var err error
-	var body []byte
-	body,err = ioutil.ReadAll(c.Request.Body)
+	body := []byte{}
+	body, err = ioutil.ReadAll(c.Request.Body)
 	if err != nil {
 		panic(err)
 	}
@@ -20,7 +20,7 @@ func Test(c *gin.Context) {
 	c.JSON(200, gin.H{
 		"message": "pong",
 		"traceid": traceid,
-		"body":string(body),
-		"result":checkResult,
+		"body":    string(body),
+		"result":  checkResult,
 	})
 }
